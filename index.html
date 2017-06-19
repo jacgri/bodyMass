@@ -9,9 +9,18 @@
 <body>
     <script type ="text/javascript">
 
-        var bodyWeight = prompt("Enter your body weight")
-        var height = prompt ("Please enter your height")
-        
+        var bodyWeight = prompt("Enter your body weight in kilograms.");
+        var height = prompt ("Please enter your height in metres.");
+        var bmi = Number(bodyWeight/(height*height));
+        var mass = bmi.toFixed(2);
+
+        if (isNaN(bodyWeight)) {
+            alert("The converter only accepts number values. Please refresh your page and try again.")
+        } else if (isNaN(height)) {
+            alert ("The converter only accepts number values. Please refresh your page and try again.")
+        } else {
+            alert("Your BMI is: " +mass)
+        }
 
     </script>
 </body>
